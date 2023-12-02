@@ -23,7 +23,7 @@ public class TeamController {
         urlAttribute.put("from", from);
         urlAttribute.put("to", to);
         ResponseEntity<Team> teamResponseEntity = new RestTemplate().getForEntity(
-                "http://localhost:8888/football-players/buy/{from}/player/{to}",
+                "http://localhost:8589/football-players/buy/{from}/player/{to}",
                 Team.class,
                 urlAttribute
         );
