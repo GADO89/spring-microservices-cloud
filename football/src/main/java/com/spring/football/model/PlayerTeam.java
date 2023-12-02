@@ -8,19 +8,17 @@ import jakarta.persistence.*;
 public class PlayerTeam {
 
     @Id
-     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-
     @Column(name = "from_")
     private String from;
-
     @Column(name = "to_")
     private String to;
-
     private int moneyPlayer;
-
     private int moneyTeam;
-
+    private String name;
+    @Transient
+    private String port;
     public PlayerTeam() {
     }
 
@@ -31,7 +29,6 @@ public class PlayerTeam {
         this.moneyPlayer = moneyPlayer;
         this.moneyTeam = moneyTeam;
     }
-
 
     public long getId() {
         return id;
@@ -71,5 +68,21 @@ public class PlayerTeam {
 
     public void setMoneyTeam(int moneyTeam) {
         this.moneyTeam = moneyTeam;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getPort() {
+        return port;
+    }
+
+    public void setPort(String port) {
+        this.port = port;
     }
 }
