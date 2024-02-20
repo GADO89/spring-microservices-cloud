@@ -13,6 +13,7 @@ import com.spring.football.model.PlayerTeam;
 @RequestMapping("/football-players")
 public class FootballPlayer {
 
+
     @Autowired
     private PlayerTeamDao playerTeamDao;
     @GetMapping("/buy/{from}/player/{to}")
@@ -20,4 +21,6 @@ public class FootballPlayer {
         PlayerTeam playerTeam=playerTeamDao.findByFromAndTo(from, to);
         return playerTeam;
     }
+
+
 }

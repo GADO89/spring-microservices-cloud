@@ -8,8 +8,8 @@ public class Team {
 
 
     private Long id;
-    private String from;
-    private String to;
+    private String fromValue;
+    private String toValue;
     private int moneyTeam;
     private String note;
     private String numberTeam;
@@ -18,10 +18,10 @@ public class Team {
     public Team() {
     }
 
-    public Team(Long id, String from, String to, int moneyTeam, String note, String numberTeam) {
+    public Team(Long id, String fromValue, String toValue, int moneyTeam, String note, String numberTeam) {
         this.id = id;
-        this.from = from;
-        this.to = to;
+        this.fromValue = fromValue;
+        this.toValue = toValue;
         this.moneyTeam = moneyTeam;
         this.note = note;
         this.numberTeam = numberTeam;
@@ -35,20 +35,20 @@ public class Team {
         this.id = id;
     }
 
-    public String getFrom() {
-        return from;
+    public String getFromValue() {
+        return fromValue;
     }
 
-    public void setFrom(String from) {
-        this.from = from;
+    public void setFromValue(String fromValue) {
+        this.fromValue = fromValue;
     }
 
-    public String getTo() {
-        return to;
+    public String getToValue() {
+        return toValue;
     }
 
-    public void setTo(String to) {
-        this.to = to;
+    public void setToValue(String toValue) {
+        this.toValue = toValue;
     }
 
     public int getMoneyTeam() {
